@@ -10,7 +10,7 @@ It will:
 Create a folder on our PC and save these all of these files to it from my github repository:
 https://github.com/jm2826/Joels-Movie-Website
 
-##Install
+## Install
 
 Install - Version 2.7.15 from https://www.python.org/
 Install - Virtualbox from https://www.virtualbox.org/wiki/Download_Old_Builds_5_1
