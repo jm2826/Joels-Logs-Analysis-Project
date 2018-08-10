@@ -11,13 +11,12 @@ Create a folder on our PC and save these all of these files to it from my github
 https://github.com/jm2826/Joels-Movie-Website
 
 ## Install
-<ul>
-Install - Version 2.7.15 from https://www.python.org/
-Install - Virtualbox from https://www.virtualbox.org/wiki/Download_Old_Builds_5_1
-Install - Vagrant from https://vagrantup.com
-Install - Git from https://git-scm.com/downloads
-Download - newsdata.zip file from Udacity.com (Fullstack Nanodegree ) Project: Logs Analysis Project
-</ul>
+*Install - Version 2.7.15 from https://www.python.org/
+*Install - Virtualbox from https://www.virtualbox.org/wiki/Download_Old_Builds_5_1
+*Install - Vagrant from https://vagrantup.com
+*Install - Git from https://git-scm.com/downloads
+*Download - newsdata.zip file from Udacity.com (Fullstack Nanodegree ) Project: Logs Analysis Project
+
 
 ## Quickstart
 *On your PC, search for Git Bash and open
