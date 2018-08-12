@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # Database code for the DB Forum.
 import psycopg2
 
@@ -15,7 +17,10 @@ cursor.execute("SELECT articles.title, count(log.path) as views "
 
 # Get all the reseults of the query and print them out
 data1 = cursor.fetchall()
-print data1
+
+# Iterate through query
+for results in data1:
+    print '"'+results[0]+'" - '+str(results[1])+ ' views'
 
 # Query to the most popular authors in db
 cursor.execute("SELECT authors.name, count(log.path) as views "
@@ -26,16 +31,23 @@ cursor.execute("SELECT authors.name, count(log.path) as views "
 
 # Get all the reseults of the query and print them out
 data2 = cursor.fetchall()
-print data2
+
+# Iterate through query
+for results in data2:
+    print results[0]+' - '+str(results[1])+ ' views'
 
 # Query to select the days more than 1% (129.08) of errors occured
-cursor.execute("SELECT to_char(time, 'yyyy-mm-dd') as date, count(*) "
-               "FROM log where status like '404%' GROUP BY date "
-               "HAVING count(*) > 129.08")
+cursor.execute("SELECT num.date, ((cast(num.count as float) / "
+               "cast(dem.count as float))*100) as percent FROM "
+               "num JOIN dem on num.date = dem.date WHERE"
+               " ((cast(num.count as float) / cast(dem.count as float))"
+               "*100) > 1")
 
 # Get all the reseults of the query and print them out
 data3 = cursor.fetchall()
-print data3
+# Iterate through query
+for results in data3:
+    print results[0]+' - ' + str(results[1]) +'% errors'
 
 # Close the connection to the nws database
 db.close()

@@ -8,9 +8,10 @@ It will:
 ## Download and Save
 
 Create a folder on our PC and save these all of these files to it from my github repository:
-https://github.com/jm2826/Joels-Movie-Website
+https://github.com/jm2826/Joels-Logs-Analysis-Project.git
 
 ## Install
+
 * Install - Version 2.7.15 from https://www.python.org/
 * Install - Virtualbox from https://www.virtualbox.org/wiki/Download_Old_Builds_5_1
 * Install - Vagrant from https://vagrantup.com
@@ -19,7 +20,7 @@ https://github.com/jm2826/Joels-Movie-Website
 
 
 ## Quickstart
-* On your PC, search for Git Bash and open
+*On your PC, search for Git Bash and open
 * In the terminal, change directory to folder where newsdata zip file was saved.
 * CD to vagrant
 * Type: vagrant up enter enter
@@ -28,6 +29,11 @@ https://github.com/jm2826/Joels-Movie-Website
 * CD to folder where your project folder is
 * Run Python file by typing: python filename.py then enter
 
+## Create View Statements
+Instead of a complex psql query, I created to views for number 3. Here are the teo queries:
+
+*create view num as SELECT to_char(time, 'yyyy-mm-dd') as date, count(*) FROM log where status like '404%' GROUP BY date;
+*create view dem as SELECT to_char(time, 'yyyy-mm-dd') as date, count(*) FROM log GROUP BY date;
 
 ## Contributing
 Please see CONTRIBUTING.md.
