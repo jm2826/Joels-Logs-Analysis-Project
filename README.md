@@ -30,7 +30,7 @@ https://github.com/jm2826/Joels-Logs-Analysis-Project.git
 * Run Python file by typing: python filename.py then enter
 
 ## Create View Statements
-Instead of a complex psql query, I created to views for number 3. Here are the teo queries:
+Instead of a complex psql query, I created to views for number 3. Here are the two queries:
 
 *create view num as SELECT to_char(time, 'yyyy-mm-dd') as date, count(*) FROM log where status like '404%' GROUP BY date;
 *create view dem as SELECT to_char(time, 'yyyy-mm-dd') as date, count(*) FROM log GROUP BY date;
