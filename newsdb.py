@@ -49,5 +49,5 @@ data3 = cursor.fetchall()
 for results in data3:
     print results[0]+' - ' + str(results[1]) +'% errors'
 
-# Close the connection to the nws database
+# Close the connection to the news database
 db.close()
